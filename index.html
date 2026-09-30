@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>함께하는 영어 탐정 · Take part in</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#24394a;background:#f4f6f0;line-height:1.65}*{box-sizing:border-box}body{margin:0;padding:32px 18px}main{max-width:760px;margin:auto}.eyebrow{font-size:13px;font-weight:800;letter-spacing:2px;color:#52725f}h1{font-size:clamp(26px,5vw,38px);line-height:1.25;margin:12px 0}h2{line-height:1.4}p{margin:12px 0}.muted{color:#596974}.card{background:#fff;border:1px solid #dce4dc;border-radius:24px;padding:clamp(22px,5vw,40px);box-shadow:0 12px 35px #24394a08;margin-top:22px}.tags{display:flex;gap:8px;flex-wrap:wrap}.tag{background:#e7efe7;padding:5px 12px;border-radius:20px;font-size:13px;font-weight:700}button{font:inherit;cursor:pointer;border-radius:13px;border:2px solid transparent;padding:13px 20px;font-weight:700;min-height:52px}button:focus-visible{outline:3px solid #d88418;outline-offset:4px}.primary{background:#245e4d;color:white}.primary:hover{background:#194737}.choices{display:grid;gap:12px;margin:22px 0}.choice{text-align:left;background:#f7f8f4;border-color:#dce4dc;color:#24394a}.choice:hover:not(:disabled){border-color:#245e4d;background:#edf5ee}.choice:disabled{cursor:default}.choice.correct{background:#e3f2e8;border-color:#34825c}.choice.wrong{background:#fff3df;border-color:#b97415}.feedback{border-radius:14px;padding:17px;background:#edf4f0}.feedback.hint{background:#fff3df}.sentence{font-size:clamp(21px,4vw,28px);line-height:1.65}.sentence strong{background:#fff0b7;border-radius:5px;padding:0 4px}.topline{display:flex;justify-content:space-between;gap:10px;font-size:14px;font-weight:700}progress{width:100%;height:9px;accent-color:#347c60;margin-top:12px}.scene{background:#eef3ea;border-radius:18px;text-align:center;margin:20px 0;padding:16px}.scene svg{width:100%;max-width:290px;height:115px}.scene p{font-size:14px;margin:0;color:#536b5a}.footer{margin:22px 0;font-size:13px;color:#61716b;text-align:center}.actions{margin-top:20px}[hidden]{display:none!important}.summary{padding:16px;border-radius:14px;background:#edf4f0}ol{padding-left:23px}li{padding:5px 0}
+</style>
+</head>
+<body><main>
+<div class="eyebrow">LITTLE ENGLISH DETECTIVES</div>
+<h1>함께하는 영어 탐정</h1>
+<p class="muted">짧은 이야기를 읽고, 표현의 뜻을 찾아봐요.</p>
+<section class="card" id="intro">
+<div class="tags"><span class="tag">초등 5–6학년</span><span class="tag">약 5–10분</span><span class="tag">6가지 상황</span></div>
+<h2>오늘의 표현: <span lang="en">take part in</span></h2>
+<p>단어를 하나씩 해석하면 뜻이 헷갈리나요? 이야기 속에서 이 표현이 무슨 뜻인지 찾아봐요.</p>
+<p><b>오늘의 목표</b><br>새로운 상황에서도 <span lang="en">take part in</span>의 뜻을 알아볼 수 있어요.</p>
+<ol><li>상황과 영어 문장을 천천히 읽어요.</li><li>뜻을 고르고, 피드백을 읽은 뒤 다음 상황으로 가요.</li></ol>
+<p class="muted">틀려도 괜찮아요. 처음에는 힌트를 받고 한 번 더 도전해요. 상황마다 약 1분씩 생각해 보세요.</p>
+<button class="primary" id="start">탐정 활동 시작하기 →</button>
+</section>
+<section class="card" id="activity" hidden aria-labelledby="questionTitle">
+<div class="topline"><span id="step"></span><span id="attempt"></span></div><progress id="progress" max="6" value="0" aria-label="완료한 상황 수"></progress>
+<div class="scene"><svg viewBox="0 0 300 115" aria-hidden="true"><path d="M30 103H270" stroke="#aec4b4" stroke-width="3"/><g fill="#edb96f"><circle cx="70" cy="30" r="16"/><circle cx="150" cy="25" r="16"/><circle cx="230" cy="30" r="16"/></g><g stroke-width="11" stroke-linecap="round" fill="none"><path d="M70 53V78M70 60L43 48M70 60L102 48M70 78L57 100M70 78L83 100" stroke="#568a79"/><path d="M150 48V77M150 56L119 43M150 56L180 43M150 77L137 100M150 77L163 100" stroke="#b97850"/><path d="M230 53V78M230 60L200 48M230 60L257 48M230 78L217 100M230 78L243 100" stroke="#63879a"/></g></svg><p id="sceneLabel"></p></div>
+<h2 id="questionTitle" tabindex="-1"></h2><p id="context"></p><p class="sentence" id="sentence" lang="en"></p>
+<p><b>이 문장에서 강조된 표현은 무슨 뜻일까요?</b></p><div id="choices" class="choices"></div>
+<div id="feedback" class="feedback" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+<div class="actions"><button id="next" class="primary" hidden>다음 상황 →</button></div>
+</section>
+<section class="card" id="finish" hidden aria-labelledby="finishTitle"><div class="tag">활동 완료</div><h2 id="finishTitle" tabindex="-1">여섯 가지 상황을 모두 살펴봤어요!</h2><p class="sentence" lang="en"><strong>take part in</strong> = participate in</p><p><b>활동이나 행사에 참여하다</b>라는 뜻이에요. 단어를 따로 해석하지 않고 하나의 표현으로 기억해요.</p><div class="summary" id="summary"></div><p lang="en">I want to <b>take part in</b> the school play.</p><p class="muted">나는 학교 연극에 참여하고 싶어요.</p><button id="restart" class="primary">처음부터 다시 해보기</button></section>
+<p class="footer">읽기 → 뜻 고르기 → 피드백 확인하기</p>
+</main>
+<script>
+'use strict';
+// One target expression, six contexts, and one consistent two-attempt rule.
+const items = [
+{title:'01 · 학교 운동회',scene:'친구들과 운동장에서',context:'내일은 운동회예요. 민수는 달리기 명단에 이름을 쓰고 운동화를 준비했어요.',sentence:'Minsu will <strong>take part in</strong> the race.',options:['경주를 구경하다','경주에 참여하다','경주를 취소하다'],answer:1,hint:'민수는 왜 명단에 이름을 쓰고 운동화를 준비했을까요? 직접 무엇을 할지 생각해 봐요.',explain:'민수는 직접 달릴 예정이에요. take part in the race는 “경주에 참여하다”예요.'},
+{title:'02 · 미술 시간',scene:'친구들과 교실에서',context:'친구들이 함께 큰 그림을 만들어요. 지아도 붓을 들고 그림 한쪽에 꽃을 그려요.',sentence:'Jia wants to <strong>take part in</strong> the art activity.',options:['미술 활동에 참여하다','미술 활동을 지켜보다','미술 활동을 그만두다'],answer:0,hint:'지아의 손에는 무엇이 있나요? 지아가 그림에 어떤 일을 하고 있는지 떠올려 봐요.',explain:'지아도 친구들과 그림을 만들어요. take part in the art activity는 “미술 활동에 참여하다”예요.'},
+{title:'03 · 공원 청소',scene:'친구들과 공원에서',context:'토요일에 친구들이 공원의 쓰레기를 주워요. 유나는 장갑을 끼고 쓰레기봉투를 가져왔어요.',sentence:'Yuna will <strong>take part in</strong> the park clean-up.',options:['공원 청소를 미루다','공원 청소를 구경하다','공원 청소에 참여하다'],answer:2,hint:'장갑과 쓰레기봉투는 무엇을 할 때 필요할까요? 유나의 준비물을 단서로 삼아 봐요.',explain:'유나는 친구들과 공원을 청소할 준비를 했어요. take part in the park clean-up은 “공원 청소에 참여하다”예요.'},
+{title:'04 · 학교 연극',scene:'친구들과 무대에서',context:'벤은 학교 연극에서 나무 역할을 맡았어요. 매일 친구들과 무대에 서는 연습을 해요.',sentence:'Ben is excited to <strong>take part in</strong> the school play.',options:['학교 연극을 관람하다','학교 연극에 참여하다','학교 연극을 취소하다'],answer:1,hint:'벤은 관객석에 앉아 있을까요, 무대에서 맡은 역할을 할까요?',explain:'벤은 역할을 맡아 연극을 함께 만들어요. take part in the school play는 “학교 연극에 참여하다”예요.'},
+{title:'05 · 과학 퀴즈',scene:'친구들과 퀴즈 시간',context:'수호는 과학 퀴즈 팀에 들어갔어요. 팀 친구들과 문제를 읽고 답을 의논해요.',sentence:'Suho is happy to <strong>take part in</strong> the science quiz.',options:['과학 퀴즈에 참여하다','과학 퀴즈를 피하다','과학 퀴즈를 구경하다'],answer:0,hint:'수호는 팀원들과 답을 의논하고 있어요. 퀴즈에서 어떤 역할을 하고 있나요?',explain:'수호는 팀원으로서 퀴즈를 풀어요. take part in the science quiz는 “과학 퀴즈에 참여하다”예요.'},
+{title:'06 · 새로운 상황에도 도전!',scene:'친구들과 독서 모임에서',context:'이번에는 영어 문장만으로 뜻을 찾아봐요. 앞에서 살펴본 표현을 떠올려 보세요.',sentence:'I love books. I want to <strong>take part in</strong> the reading club.',options:['독서 모임을 떠나다','독서 모임을 구경하다','독서 모임에 참여하다'],answer:2,hint:'책을 좋아하는 아이가 독서 모임에서 하고 싶은 일은 무엇일까요?',explain:'take part in은 새로운 상황에서도 “참여하다”예요. 이 아이는 독서 모임에 참여하고 싶어 해요.'}
+];
+const $=id=>document.getElementById(id);
+let current=0, mistakes=0, resolved=false, first=0, retry=0;
+function render(){
+ const q=items[current];mistakes=0;resolved=false;
+ $('step').textContent=`상황 ${current+1} / ${items.length}`;$('attempt').textContent='첫 번째 도전';$('progress').value=current;
+ $('questionTitle').textContent=q.title;$('context').textContent=q.context;$('sceneLabel').textContent=q.scene;$('sentence').innerHTML=q.sentence;
+ $('feedback').hidden=true;$('feedback').textContent='';$('feedback').className='feedback';$('next').hidden=true;
+ $('next').textContent=current===items.length-1?'결과 확인하기 →':'다음 상황 →';$('choices').replaceChildren();
+ q.options.forEach((label,index)=>{const b=document.createElement('button');b.className='choice';b.textContent=label;b.addEventListener('click',()=>answer(index,b));$('choices').append(b);});
+ $('questionTitle').focus();
+}
+function answer(index,button){
+ if(resolved||button.disabled)return;
+ const q=items[current];const feedback=$('feedback');feedback.hidden=false;
+ if(index===q.answer){if(mistakes===0)first++;else retry++;feedback.className='feedback';feedback.textContent='맞았어요! '+q.explain;complete();}
+ else{mistakes++;button.disabled=true;button.classList.add('wrong');
+ if(mistakes===1){$('attempt').textContent='힌트 읽고 한 번 더!';feedback.className='feedback hint';feedback.textContent='아직 아니에요. 힌트: '+q.hint+' 다른 답을 한 번 골라 보세요.';[...$('choices').children].find(b=>!b.disabled).focus();}
+ else{feedback.className='feedback';feedback.textContent='함께 확인해 봐요. 정답은 “'+q.options[q.answer]+'”예요. '+q.explain;complete();}}
+}
+function complete(){resolved=true;$('attempt').textContent='확인 완료';$('progress').value=current+1;[...$('choices').children].forEach((b,i)=>{b.disabled=true;if(i===items[current].answer)b.classList.add('correct');});$('next').hidden=false;$('next').focus();}
+function start(){current=0;first=0;retry=0;$('intro').hidden=true;$('finish').hidden=true;$('activity').hidden=false;render();}
+$('start').addEventListener('click',start);$('restart').addEventListener('click',start);
+$('next').addEventListener('click',()=>{if(!resolved)return;current++;if(current<items.length){render();return;}$('activity').hidden=true;$('finish').hidden=false;$('summary').textContent=`처음에 맞힌 상황 ${first}개 · 힌트 후 맞힌 상황 ${retry}개 · 설명으로 배운 상황 ${items.length-first-retry}개. 마지막 상황${first+retry===0?'도 함께 살펴봤어요.':'까지 꾸준히 도전했어요!'}`;$('finishTitle').focus();});
+</script></body></html>
